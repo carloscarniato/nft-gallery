@@ -19,7 +19,7 @@ export default function ThemeToggle() {
   return (
     <div>
         <input className='w-0 h-0 hidden' type="checkbox" id="darkmode-input" checked={htmlElement?.classList.contains("dark") ?? false} onChange={toggleTheme}/>
-          <label className="w-16 h-8 relative block bg-slate-200 after:bg-white after:left-2 rounded-3xl cursor-pointer after:content-[''] after:w-5 after:h-5 after:absolute after:top-1.5 after:rounded-full after:left-14 duration-300 dark:bg-gray-800 dark:after:bg-gray-600 dark:after:left-9" htmlFor="darkmode-input">
+          <label className="w-16 h-8 relative block bg-slate-200 after:bg-white after:left-2 rounded-3xl cursor-pointer after:content-[''] after:w-5 after:h-5 after:absolute after:top-1.5 after:rounded-full after:left-14 duration-300 dark:bg-slate-800 dark:after:bg-slate-600 dark:after:left-9" htmlFor="darkmode-input">
             <svg
               width={16}
               height={16}
