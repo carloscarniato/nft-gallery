@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import ImageWithLoader from './image-with-loader';
 
 type CardProps = {
     onClick: () => void;
@@ -10,12 +11,7 @@ export default function Card({data, onClick}: CardProps) {
         <button onClick={onClick} type='button' className="relative w-full h-96 rounded-3xl border-0 flex justify-center">
             {
                 data.image_url ? (
-                    <Image
-                        src={data.image_url}
-                        fill
-                        className="w-full object-cover rounded-3xl"
-                        alt={`${data.name} Image`}
-                    />
+                    <ImageWithLoader src={data.image_url} alt={`${data.name} Image`}/>
                 ) : (
                     <div className='flex items-center justify-center bg-slate-200 w-[400px] h-[384px] rounded-3xl text-sm dark:bg-neutral-600 dark:text-white'>Image not available</div>
                 )
